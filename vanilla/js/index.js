@@ -20,16 +20,23 @@ const apiData = async(city) => {
     try {
         const data = await fetch(url) 
         const json = await data.json()
-    
-        const {name, sys:{country}, main:{temp}} = json
+        
+        if (json.cod == 404) {
+            return mostrarError('Ciudad invalida')
+        }
+        
+        const {name, sys:{country}, main:{temp, temp_max, temp_min}} = json
 
         containerData.innerHTML = `
             <h1>${name}</h1>
             <span>${country}</span>
-            <p class="${tempColor(temp)}">Temperatura ${json.main.temp}°</p>
+            <p class=${tempColor(temp)}>Temperatura ${temp}°</p>
+            <span class="tempP">Temperatura maxima ${temp_max}°</span>
+            <span class="tempP">Temperatura minima ${temp_min}°</span>
+            <img class="searchPhoto" src="https://source.unsplash.com/1920x1080/?${name}">
         `
-    } catch (error) {
-        mostrarError('Ciudad invalida')
+    } catch (err) {
+        mostrarError('Error al consultar')
     }
 }
 
@@ -49,7 +56,7 @@ const spinner = () => {
 const mostrarError = (msg) => {
     containerData.innerHTML = `
         <div class="error">
-            <span>Error</span>
+            <span class="errorTitle">Error</span>
             <span>${msg}</span>
         </div>
     `
@@ -63,5 +70,4 @@ const tempColor = (temp) => {
 }
 
 document.querySelector('#consButton').addEventListener("click", userValue)
-
 

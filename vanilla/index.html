@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="stylesheet" href="styles.css" />
-  <title>Weather App</title>
-</head>
-<body>
-  <div class="app">
-    <header class="app-header">
-      <img width="120px" src="../img/weather-icon-png-8.png" alt="weatherIcon">
-      <h1>Weather App</h1>
-      <div>
-        <form>
-          <h1 class="title">Ingrese la ciudad</h1>
-          <input type="text" id="value"><br>
-          <button id="consButton">Consultar</button>
-        </form>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/sunCloud.png" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="bar">
+        <img width="50px" src="./img/sunCloud.png" alt="WeatherIcon">
+        <span>Weather <span class="cold">App</span></span>
       </div>
-      <p id="data"></p>
-    </header>
-  </div>
-  <script src="index.js"></script>
-</body>
-
+      <header class="app-header">
+        <div>
+          <form>
+            <h1 class="title">Ingrese la ciudad</h1>
+            <input placeholder="Paris..." type="text" id="value"><br>
+            <button id="consButton">Consultar</button>
+          </form>
+        </div>
+        <p id="data"></p>
+      </header>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
 </html>

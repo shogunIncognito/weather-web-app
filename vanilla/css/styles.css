@@ -5,13 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #11142D;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 
 .app {
   text-align: center;
@@ -30,12 +30,13 @@ code {
 
 .app-header {
   background-color: #11142D;
-  min-height: 100vh;
   display: flex;
+  /* min-height: 100vh; */
+  margin-top: 30px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(7px + 2vmin);
   color: white;
 }
 
@@ -43,20 +44,10 @@ code {
   color: #61dafb;
 }
 
-@keyframes app-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 button {
   border-radius: 6px;
   padding: 5px;
-  margin-top: 5px;
+  margin-top: 20px;
   background-color: white;
   transition-duration: 0.4s;
 }
@@ -64,7 +55,7 @@ button {
 button:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   background-color: #34d5db; /* Green */
-  color: white;
+  color: black;
 }
 
 .sk-chase {
@@ -126,10 +117,11 @@ button:hover {
   display: flex;
   flex-direction: column;
   background-color: red;
-  padding: 2px;
+  padding: 5px;
   border-radius: 8px;
   font-weight: bold;
   gap: 10px;
+  border: rgb(35, 174, 255) solid 4px;
 }
 
 h1 {
@@ -137,7 +129,8 @@ h1 {
 }
 
 .title {
-  margin-top: 10%;
+  margin-top: 8%;
+  font-size: xx-large;
 }
 
 .hot {
@@ -157,4 +150,44 @@ input {
   padding: 10px;
   border-radius: 5px;
   border: #61dafb 3px solid;
+}
+
+.tempP {
+  display: block;
+  font-size: medium;
+  font-weight: lighter;
+}
+
+.supBar {
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  display: flex;
+  color: white;
+  align-items: center;
+  font-size: small;
+  border: #4bbbbe solid 1px;
+  flex-direction: column;
+  border-radius: 10px;
+  background-image: url('../img/rainy.webp');
+  font-weight: bold;
+}
+
+.searchPhoto {
+  margin-top: 30px;
+  width: 40%;
+  border-radius: 20px;
+  padding: 1rem;
+  position: relative;
+  padding: 3px;
+}
+
+.errorTitle {
+  border: 5px solid;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #11142D;
 }
